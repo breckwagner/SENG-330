@@ -24,6 +24,7 @@ public class gameProcessor extends game {
       System.out.println("The monster has been defeated!");
     } else{
       player.Health = Player.Health - monster.Attack;
+	  System.out.println("The monster attacked you. Your health decreased by %d\n", monster.Attack);
     }
   }
 
