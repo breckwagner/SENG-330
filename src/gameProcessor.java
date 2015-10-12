@@ -10,12 +10,27 @@ public class gameProcessor extends game {
   public Room previousRoom;
 
   public void Move( room1,  room2) {
+    System.out.println("There are two doors, one to the left and one to the right. Which door do you take?");
+    stdin= stdin.next();
+    boolean valid = false;
+    while(valid = false){
+      if(stdin = "left"){
+      currentRoom = room1;
+      valid = true;
+      } else if(stdin = "right"){
+      currentRoom= room2;
+      valid = true;
+      } else {
+      System.out.println("Please either enter 'left' or 'right'");
+      }
+    }
   }
 
   public void putMonster( Monster,  room) {
   }
 
-  public void useItem( item,  target) {
+  public void useItem( item) {
+    item.use(target);
   }
 
   public void attackMonster( Monster monster) {
