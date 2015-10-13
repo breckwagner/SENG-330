@@ -1,19 +1,22 @@
 public class Monster extends game {
-  
-  public Monster(){
-    this.health = 30; // stat could change 
-	this.attack = 10; //
-  }
 
-  public Integer AvoidChance;		/* Between 0-10 */
+	public int health;
+	public int attack;
 
-  public void attack(Monster monster, Player player) {
-	player.Health = player.Health - monster.Health;
+
+	public Monster(){
+	this.health = 30; // stat could change 
+	this.Attack = 10; //
+}
+
+public Integer AvoidChance;		/* Between 0-10 */
+
+public void attack(Player player) {
+	player.Health = player.Health - monster.Attack;
 	if(player.Health <= 0){
-	  System.out.println("Game Over! Start over?");
+		System.out.println("Game Over! Start over?");
 	}
-  }
-  
-  public int health;
-  public int attack;
+}
+
+
 }

@@ -41,7 +41,7 @@ public class gameProcessor extends game {
       System.out.println("The monster has been defeated!");
     } else{
       player.Health = Player.Health - monster.Attack;
-	  System.out.println("The monster attacked you. Your health decreased by %d\n", monster.Attack);
+	  System.out.println("The monster attacked you. Your health decreased by " + monster.Attack);
     }
   }
 
@@ -69,7 +69,7 @@ public class gameProcessor extends game {
   }
 
   public void gameOver( player) {
-    System.out.println("You have failed in your journey, a new quest alwasy awaits you!");
+    System.out.println("You have failed in your journey, a new quest always awaits you!");
     /* Not sure how to start bring the game back to the initial state */
     /* Can either automatically relaunch the game
        or can ask the user if they want to quit or restart */    
