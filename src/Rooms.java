@@ -17,7 +17,7 @@ public class Room extends game {
 
 	public Room(){
 		Random rand = new Random();
-		
+
 		Trap = rand.nextInt(99);
 
 		if(rand.nextInt(1)>0){
