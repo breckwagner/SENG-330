@@ -1,11 +1,9 @@
 public class Monster extends game {
+  
   public Monster(){
     this.health = 30; // stat could change 
 	this.attack = 10; //
   }
-  public Integer health;
-
-  public Integer attack;
 
   public void attack(Monster monster, Player player) {
 	player.Health = player.Health - monster.Health;
@@ -13,5 +11,7 @@ public class Monster extends game {
 	  System.out.println("Game Over! Start over?");
 	}
   }
-
+  
+  public int health;
+  public int attack;
 }
