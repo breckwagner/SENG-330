@@ -2,7 +2,12 @@ import java.util.Random;
 
 public class Room extends game {
 
-
+	public int roomNum;
+	
+	public String Name;
+	
+	public String Description;
+	
 	public Boolean HasItem;
 
 	public Integer Trap;
@@ -39,5 +44,16 @@ public class Room extends game {
 
 		ConnectingRoom1 = new Room();
 		ConnectingRoom2 = new Room();
+	}
+	
+	public Room(int rNum,String rName,String rDesc,Room cRoom0,Room cRoom1,Room pRoom,item hasItem, trap hasTrap){
+			this.roomNum = rNuml; // This room number
+			this.roomName = rName; 	// Room name, ie. "Living Room"
+			this.Description = rDesc // Description will be added with Aman
+			this.ConnectingRoom1 = cRoom1; // connects to a room by number
+			this.ConnectingRoom1 = cRoom2; // connects to a room by number
+			this.PrevousRoom = pRoom; // room that precluded this room, and so forth
+			this.item = hasItem;  // item that will be in the room, each room supports one unless we implement an inventory per room
+			this.trap = hasTrap; // traps will be an object in the end which will have a description and maybe an answer?
 	}
 }
