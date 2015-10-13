@@ -4,11 +4,17 @@ public class Monster extends game {
 	public int attack;  // The attack strengh of the monster. Will be read from file.
 	public String type; // Will be the name the monster appears as in the terminal
 
-	public Monster(){
+	public Monster(){ // Constructor for a generic monster - should use loaded method below
 	this.health = 30; // stat could change 
 	this.Attack = 10; //
-	this.type = "MonsterTemplate"; // Template name for Monster
+	this.type = "genericMonster"; // Template name for Monster
 }
+
+	public Monster(int startHealth, int startAttack, String startType){ // constructor for a specific monster.
+		this.health = startHealth;
+		this.attack = startAttack;
+		this.type = startType;
+	}
 
 public Integer AvoidChance;		/* Between 0-10 */
 
