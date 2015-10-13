@@ -12,6 +12,12 @@ public class Item extends game {
 
   public Boolean isUsed;
 
+  public Item(String type){
+    this.amount = 0;
+    this.type = type;
+    this.healthModifier = 20;
+    this.damageModifier = 10;
+  }
 
   use(Player player){
   	if(type = "potion"){

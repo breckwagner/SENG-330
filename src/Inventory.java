@@ -1,9 +1,10 @@
 public class Inventory extends game {
 
-  public Items[] stuff = new Items[2];
+  public Item[] stuff = new Item[2];
 
   public Inventory(){
-  	stuff[0] = new Items()
+  	stuff[0] = new Item("potion");
+  	stuff[1] = new Item("weapon");
   }
 
 }
