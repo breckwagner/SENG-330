@@ -6,6 +6,7 @@ public class gameProcessor extends game {
   public Monster currentMonster;
   public Item currentItem;
   public Room currentRoom;
+  public Random rand;
 
   public void Move( room1,  room2) {
     System.out.println("There are two doors, one to the left and one to the right. Which door do you take?");
@@ -44,11 +45,19 @@ public class gameProcessor extends game {
     }
   }
 
+  public void avoidMonster( Monster monster) {
+    int playerRoll = rand.nextInt(10);
+    if(playerRoll>=monster.AvoidChance){
+      System.out.println("You have successfully avoided the monster! You did not have a chance to see if there were any items around.");
+      currentRoom.hasMonster = false;
+      currentRoom.hasItem = false;
+    }
+  }
+
   public int calculateAttack(Player player){
       int min = player.Attack - 2;
       int max - player.Attack + 2;
 
-      Random rand = new Random();
       return rand.nextInt(max - min) + min;     /* Have to test, pulled it from stack overflow*/
   }
 
@@ -76,7 +85,7 @@ public class gameProcessor extends game {
                                              the threshold needed to meet/surpass to avoid the trap
                                              the max value will be 99*/
 
-    int playerRoll = Random.nextInt(100); /*For now just a random number between 0 and 100 is chosen,
+    int playerRoll = rand.nextInt(100); /*For now just a random number between 0 and 100 is chosen,
                                             this will always give the player a chance to pass the trap*/
 
     if(playerRoll >= trapChance){

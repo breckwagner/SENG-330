@@ -5,6 +5,8 @@ public class Monster extends game {
 	this.attack = 10; //
   }
 
+  public Integer AvoidChance;		/* Between 0-10 */
+
   public void attack(Monster monster, Player player) {
 	player.Health = player.Health - monster.Health;
 	if(player.Health <= 0){
