@@ -22,6 +22,8 @@ public class gameProcessor extends game {
       } else {
       System.out.println("Please either enter 'left' or 'right'");
       }
+      System.out.println("Invalid Answer, Left or Right please.")
+      stdin =stdin.next();
     }
   }
 
