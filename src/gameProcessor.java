@@ -1,13 +1,11 @@
+import java.util.Random;
+
+
 public class gameProcessor extends game {
-  import java.util.Random;
 
   public Monster currentMonster;
-
+  public Item currentItem;
   public Room currentRoom;
-
-  public Room nextRoom;
-
-  public Room previousRoom;
 
   public void Move( room1,  room2) {
     System.out.println("There are two doors, one to the left and one to the right. Which door do you take?");
@@ -27,6 +25,9 @@ public class gameProcessor extends game {
   }
 
   public void putMonster( Monster,  room) {
+    if(currentRoom.HasMonster){
+      currentMonster = new Monster();
+    }
   }
 
   public void useItem( item) {
@@ -52,6 +53,10 @@ public class gameProcessor extends game {
   }
 
   public void pickupItem( Item) {
+    if(currentRoom.HasItem){
+      currentItem = new Item();
+      player.inventory.add(currentItem);
+    }
   }
 
   public void gameOver( player) {
@@ -90,7 +95,7 @@ public class gameProcessor extends game {
     /* User input */
     char userInput = stdin.next() /* Just an example, not 100% on how we are handling the input yet*/
     if(userInput = "y"){
-      pickupItem(currentRoom.item);
+      pickupItem(currentItem);
     }
   }
 

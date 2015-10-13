@@ -1,4 +1,4 @@
-public class Items extends game {
+public class Item extends game {
 
   public Integer amount;
 
