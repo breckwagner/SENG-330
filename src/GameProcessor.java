@@ -57,6 +57,7 @@ public class GameProcessor extends Game {
     }
 
     public int calculateAttack(Player player){
+		    Random rand = new Random();
             int min = player.Attack - 2;
             int max = player.Attack + 2;
 
