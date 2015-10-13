@@ -1,7 +1,7 @@
 import java.util.Random;
 
 
-public class gameProcessor extends game {
+public class GameProcessor extends game {
 
   public Monster currentMonster;
   public Item currentItem;
@@ -74,7 +74,7 @@ public class gameProcessor extends game {
     System.out.println("You have failed in your journey, a new quest always awaits you!");
     /* Not sure how to start bring the game back to the initial state */
     /* Can either automatically relaunch the game
-       or can ask the user if they want to quit or restart */    
+       or can ask the user if they want to quit or restart */
   }
 
   public void checkHealth( Player player) {
@@ -83,7 +83,7 @@ public class gameProcessor extends game {
   }
 
   public void avoidTrap() {
-    int trapChance = currentRoom.trap;    /* each Room contains a trap value, that value determines 
+    int trapChance = currentRoom.trap;    /* each Room contains a trap value, that value determines
                                              the threshold needed to meet/surpass to avoid the trap
                                              the max value will be 99*/
 

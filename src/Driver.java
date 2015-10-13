@@ -1,6 +1,8 @@
+import Game;
+
 public class Driver {
 
-  public game Game;
+  public Game game;
 
   public void main() {
   	gameProcessor gm = new gameProcessor();

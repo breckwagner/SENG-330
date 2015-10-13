@@ -1,4 +1,4 @@
-public class game {
+public class Game {
 
   public Database Rooms;
 
