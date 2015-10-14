@@ -6,7 +6,7 @@ public class GameProcessor extends Game {
     public Monster currentMonster;
     public Item currentItem;
     public Room currentRoom;
-    public Random rand;
+    public Random rand = new Random();
 
     public void Move(Room room1, Room room2) {
         System.out.println("There are two doors, one to the left and one to the right. Which door do you take?");
@@ -22,8 +22,7 @@ public class GameProcessor extends Game {
             } else {
                 System.out.println("Please either enter 'left' or 'right'");
             }
-            System.out.println("Invalid Answer, Left or Right please.");
-            stdin =stdin.next();
+			stdin =stdin.next();
         }
     }
 
@@ -57,7 +56,6 @@ public class GameProcessor extends Game {
     }
 
     public int calculateAttack(Player player){
-		    Random rand = new Random();
             int min = player.Attack - 2;
             int max = player.Attack + 2;
 
