@@ -1,4 +1,4 @@
-public class Inventory extends game {
+public class Inventory {
 
   public Item[] stuff = new Item[2];
 

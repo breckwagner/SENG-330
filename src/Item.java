@@ -1,4 +1,4 @@
-public class Item extends game {
+public class Item extends Game {
 
   public Integer amount;
 
@@ -19,10 +19,10 @@ public class Item extends game {
     this.damageModifier = 10;
   }
 
-  use(Player player){
-  	if(type = "potion"){
+  public void use(Player player){
+  	if(type == "potion"){
   		player.Health = player.Health + healthModifier;
-  	} else if(type = "weapon"){
+  	} else if(type == "weapon"){
   		player.Attack = player.Attack + damageModifier;
   	}
   }

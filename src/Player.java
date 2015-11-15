@@ -1,19 +1,18 @@
 
-public class Player extends game {
+public class Player {
 
-  public Player(String name){
-	this.playerName = name;
-    this.health = 100;
-	this.attack = 15; //not sure what we would start with
-  }
-  public String playerName;
+	public Player(String name) {
+		this.playerName = name;
+		this.health = 100;
+		this.attack = 15; // not sure what we would start with
+	}
 
-  public Inventory inventory;
+	public String playerName;
 
-  public int Health;
+	public Inventory inventory;
 
-  public int Attack;
+	public int health;
 
-  public Type Character;
+	public int attack;
 
 }
