@@ -1,3 +1,7 @@
+playerInput
+if(retaliateOption(playerInput)){ monster/trap attacks }
+
+
 import java.io.Console;
 import java.util.Arrays;
 import java.io.IOException;
@@ -6,47 +10,69 @@ public class Driver {
 
     public static void main (String args[]) throws IOException {
 
+        Game g = new Game(0);
+        String[] commands = {"help","pick up items","fight monster","move room","check inventory","use item"}
+
+
         Console c = System.console();
         if (c == null) {
             System.err.println("No console.");
             System.exit(1);
         }
 
-        String login = c.readLine("Enter your login: ");
-        char [] oldPassword = c.readPassword("Enter your old password: ");
+        while(g.isRunning()){
+            System.out.println("You enter a new room which contains: ");
+            System.out.println(g.currentRoom.listObjects());
+            String playerInput = c.readLine("What would you like to do?:");
+            if(retaliateOption(playerInput)){
+                g.currentRoom.initiateEvents(g.player);
+            }
 
-        if (verify(login, oldPassword)) {
-            boolean noMatch;
-            do {
-                char [] newPassword1 = c.readPassword("Enter your new password: ");
-                char [] newPassword2 = c.readPassword("Enter new password again: ");
-                noMatch = ! Arrays.equals(newPassword1, newPassword2);
-                if (noMatch) {
-                    c.format("Passwords don't match. Try again.%n");
-                } else {
-                    change(login, newPassword1);
-                    c.format("Password for %s changed.%n", login);
-                }
-                Arrays.fill(newPassword1, ' ');
-                Arrays.fill(newPassword2, ' ');
-            } while (noMatch);
         }
 
-        Arrays.fill(oldPassword, ' ');
     }
 
-    // Dummy change method.
-    static boolean verify(String login, char[] password) {
-        // This method always returns
-        // true in this example.
-        // Modify this method to verify
-        // password according to your rules.
-        return true;
+    public static void runCommand(String cmd, Game g){
+        switch(cmd){
+            case "help":
+                System.out.println(commands);
+                break;
+            case "pick up items":
+                for(GameObject obj : g.currentRoom.listOfObjects){
+                    if(obj instanceof Item){
+                        g.player.inventory.add(obj);
+                        g.currentRoom.listOfObjects.remove(obj);
+                    }
+                }
+                break;
+
+            case "fight monster":
+                for (GameObject obj : g.currentRoom.listOfObjects){
+                    obj.receiveDamage(g.player);
+                }
+                break;
+
+            case "move room":
+                System.out.println("There are 3 doors in the room, one to the left, middle and right.");
+                String playerInput = c.readLine("Which door do you choose?: ");
+                g.moveRoom();
+                break;
+
+            case "check inventory":
+                System.out.println(g.player.inventory);
+                break;
+
+            case "use item":
+                System.out.println("Your inventory currently holds :" + g.player.inventory);
+                String playerInput = c.readLine("What type of item would you like to use?");
+                for(Item i : g.player.inventory){
+                    if(i.name.equals(playerInput)){
+                        i.use();
+                        break;
+                    }
+                }
+                break;
+        }
     }
 
-    // Dummy change method.
-    static void change(String login, char[] password) {
-        // Modify this method to change
-        // password according to your rules.
-    }
 }
