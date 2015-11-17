@@ -2,10 +2,8 @@
 /**
  *
  */
-public abstract class GameObject {
+public interface GameObject {
 
-    public void action(Player p) {
-    	//pass
-    }
+    public void action(Player p);
 
 }
