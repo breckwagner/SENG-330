@@ -5,8 +5,8 @@ JC = javac
 	$(JC) $(JFLAGS) $*.java
 
 CLASSES = \
-	Room.java \
-	TestBed1.java
+	*.java \
+	# TestBed1.java
 default: classes
 
 classes: $(CLASSES:.java=.class)

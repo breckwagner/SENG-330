@@ -14,7 +14,7 @@ public class Driver {
     public static void main (String args[]) throws IOException {
 
         Game g = new Game(0);
-        String[] commands = {"help","pick up items","fight monster","move room","check inventory","use item"}
+        String[] commands = {"help","pick up items","fight monster","move room","check inventory","use item"};
 
 
         Console c = System.console();
