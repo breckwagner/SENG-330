@@ -2,6 +2,12 @@ import java.io.Console;
 import java.util.Arrays;
 import java.io.IOException;
 
+
+///Brief Description of Driver
+
+/*
+*   Detailed Description of Driver
+*/
 public class Driver {
 
     public static void main (String args[]) throws IOException {
@@ -18,7 +24,7 @@ public class Driver {
 
         while(g.isRunning()){
             System.out.println("You enter a new room which contains: ");
-            System.out.println(g.currentRoom.listObjects());
+            g.currentRoom.printListObjectsInRoom("","",",");
             String playerInput = c.readLine("What would you like to do?:");
             if(retaliateOption(playerInput)){
                 g.currentRoom.initiateEvents(g.player);
