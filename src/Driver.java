@@ -44,7 +44,7 @@ public class Driver {
  * "check inventory"
  * "use item"
  * @param g Game object game object created from main()
- *  * @param cmd command string taken from the console.
+ * @param cmd command string taken from the console.
  */
     public static void runCommand(String cmd, Game g){
         switch(cmd){
