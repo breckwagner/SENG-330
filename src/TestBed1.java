@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 /**
@@ -18,6 +18,8 @@ public class TestBed1 {
 			listOfRooms[i] = new Room();
 			if(i>0) listOfRooms[i].neighboringRooms.add(listOfRooms[i-1]);
 		}
+		
+		listOfRooms[0].printListObjectsInRoom("","",",");
 
 	}
 
