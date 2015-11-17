@@ -1,3 +1,8 @@
+/**
+ * Extends gameObject for the adversaries to interact with the player. The adversary can either be a monster
+ * or a trap.
+ */
+
 public class Adversary extends GameObject{
 
 	int health;
