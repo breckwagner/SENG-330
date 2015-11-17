@@ -7,11 +7,13 @@ import java.util.List;
  * A Room object encapsulates the state information needed
  * for the various configurations of of games.
  *
- * @author      Richard B. Wagner
+ * @author ...
+ * @author Richard B. Wagner
+ * 
  */
 public class Room {
-	ArrayList<GameObject> listOfObjects = new ArrayList<GameObject>();
-	ArrayList<Room> neighboringRooms = new ArrayList<Room>();
+	List<GameObject> listOfObjects = new ArrayList<GameObject>();
+	List<Room> neighboringRooms = new ArrayList<Room>();
 
 
 	/**
@@ -20,6 +22,12 @@ public class Room {
 	 */
     public Room() {}
 
+	/**
+	 * Constructor
+	 */
+	public Room(List<Room> neighboringRooms) {
+		this.neighboringRooms = neighboringRooms;
+	}
 
 	/**
      * Prints a list of the GameObject in a room.
@@ -46,9 +54,27 @@ public class Room {
 		System.out.println(joinWith(prefix, postfix, delimiter, this.listOfObjects));
 	}
 
+	/**
+	 * Prints a list of the GameObject in a room.
+	 * @param prefix a String to prepend at the beginning the output
+	 * @param postfix a String to append at the end of the output
+	 * @param delimiter a string to insert in between each element in the list
+	 */
     public void listObjectsInRoom() {
         for (GameObject object : listOfObjects) {
         	System.out.println(object + ", ");
         }
     }
+
+	/**
+	 * For each GameObject in the room, call that objects action method. For 
+	 * items, this will be an empty call. 
+	 */
+	public void initiateEvents(Player p) {
+		for (GameObject object : listOfObjects) {
+			object.action(p);
+		}
+	}
 }
+
+
