@@ -1,11 +1,20 @@
+
+
+
+
 public class Game {
+    public Player player = new Player();
 
-  public Database Rooms;
+    public Game() {
 
-  public Database Player;
+    }
 
-  public Database Inventory;
+    public Game(long seed) {
 
-  public Database Monsters;
+    }
 
+
+    public boolean isRunning() {
+        return (player.health > 0);
+    }
 }
