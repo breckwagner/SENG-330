@@ -23,7 +23,7 @@ public class Player {
 	public Player() 
 	{
 		this.health = 100;
-		this.attackDamage = 10;
+		this.attack = 10;
 		this.potion = 0;
 	}
 	
