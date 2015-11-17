@@ -1,0 +1,15 @@
+package enemy;
+
+message Monster
+{
+	required string type = 1;
+	required int32 health = 2;
+	required int32 attack = 3;
+	optional string name = 4;
+}
+
+message Trap
+{
+	required int32 attack = 1;
+	optional string name = 2;
+}
