@@ -30,7 +30,7 @@ public class Player {
 	/*
 	* Increase the player's health and decrease potion by 1
 	*/
-	public usePotion()
+	public void usePotion()
 	{
 		this.health += 20;
 		this.potion--;
