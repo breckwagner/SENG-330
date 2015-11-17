@@ -13,6 +13,8 @@ public class Adversary extends GameObject{
 
 	/*
 	* Constructor allowing for health and attack to be specified
+	* @param h health of the monster or trap
+	* @param a attack damage of the monster or trap
 	*/
 	public Adversary(int h, int a){
 		health = h;
@@ -20,6 +22,7 @@ public class Adversary extends GameObject{
 	}
 	/*
 	* Takes the player as a parameter and will reduce its health by the Adversary's attack
+	* @param p take the player removes the value fo the adversary attack formt he players health.
 	*/
 	public static int recieveDamage(Player p){
 		health -= p.attack;
