@@ -7,9 +7,11 @@ import java.util.List;
  * A Room object encapsulates the state information needed
  * for the various configurations of of games.
  *
- * @author ...
- * @author Richard B. Wagner
- * 
+ * 	@author Richard B. Wagner
+ *	@author Mook Tungs
+ *	@author Zac Broitman
+ *	@author Greg Bacic
+ *
  */
 public class Room {
 	List<GameObject> listOfObjects = new ArrayList<GameObject>();
@@ -67,8 +69,8 @@ public class Room {
     }
 
 	/**
-	 * For each GameObject in the room, call that objects action method. For 
-	 * items, this will be an empty call. 
+	 * For each GameObject in the room, call that objects action method. For
+	 * items, this will be an empty call.
 	 */
 	public void initiateEvents(Player p) {
 		for (GameObject object : listOfObjects) {
@@ -76,5 +78,3 @@ public class Room {
 		}
 	}
 }
-
-
