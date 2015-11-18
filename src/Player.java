@@ -36,7 +36,7 @@ public class Player {
 		this.potion--;
 	}
 
-	public void recieveDamage(Adversary a){
+	public void receiveDamage(Adversary a){
 		health -= a.attack;
 	}
 }
