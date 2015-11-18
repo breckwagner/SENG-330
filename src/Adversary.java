@@ -6,8 +6,8 @@ public class Adversary implements GameObject{
  */
 
 	Room currRoom;
-	int health;
-	int attack;
+	public int health;
+	public int attack;
 
 	/*
 	* Default Constructor for Adversary
