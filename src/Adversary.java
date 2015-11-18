@@ -33,7 +33,7 @@ public class Adversary implements GameObject{
 	* Takes the player as a parameter and will reduce its health by the Adversary's attack
 	* p take the player removes the value fo the adversary attack formt he players health.
 	*/
-	public int recieveDamage(Player p){
+	public void recieveDamage(Player p){
 		health -= p.attack;
 		if(health <= 0){
 			currRoom.listOfObjects.remove(this);
