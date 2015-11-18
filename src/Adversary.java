@@ -1,4 +1,9 @@
+
 public class Adversary implements GameObject{
+/**
+ * Implements gameObject for the adversaries to interact with the player. The adversary can either be a monster
+ * or a trap.
+ */
 
 	Room currRoom;
 	int health;
@@ -15,6 +20,9 @@ public class Adversary implements GameObject{
 
 	/*
 	* Constructor allowing for health and attack to be specified
+	* r the current room
+	* h health of the monster or trap
+	* a attack damage of the monster or trap
 	*/
 	public Adversary(Room r,int h, int a){
 		currRoom = r;
@@ -23,6 +31,7 @@ public class Adversary implements GameObject{
 	}
 	/*
 	* Takes the player as a parameter and will reduce its health by the Adversary's attack
+	* p take the player removes the value fo the adversary attack formt he players health.
 	*/
 	public int recieveDamage(Player p){
 		health -= p.attack;

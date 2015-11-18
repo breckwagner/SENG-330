@@ -3,10 +3,11 @@ import java.util.Arrays;
 import java.io.IOException;
 
 
-///Brief Description of Driver
 
-/*
-*   Detailed Description of Driver
+
+/**
+*  Main driver for the game, will create a gameObject g and runs a loop to process commands
+*  from the console.
 */
 public class Driver {
 
@@ -33,7 +34,18 @@ public class Driver {
         }
 
     }
-
+/**
+ * Contains the  switches for the game to run and process command, all command from the
+ * Available commands are
+ * "help"
+ * "pick up items"
+ * fight monster"
+ * "move room"
+ * "check inventory"
+ * "use item"
+ * @param g Game object game object created from main()
+ * @param cmd command string taken from the console.
+ */
     public static void runCommand(String cmd, Game g){
         switch(cmd){
             case "help":
