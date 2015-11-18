@@ -1,0 +1,45 @@
+\hypertarget{class_driver}{}\section{Driver Class Reference}
+\label{class_driver}\index{Driver@{Driver}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_driver_ad96bcac1144441cfe3fdf2e728349b79}{main} (String args\mbox{[}$\,$\mbox{]})  throws I\+O\+Exception 
+\item 
+static void \hyperlink{class_driver_aa89853174e62c333ae37e86bb3c32c60}{run\+Command} (String cmd, \hyperlink{class_game}{Game} g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main driver for the game, will create a game\+Object g and runs a loop to process commands from the console. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_driver_ad96bcac1144441cfe3fdf2e728349b79}{}\index{Driver@{Driver}!main@{main}}
+\index{main@{main}!Driver@{Driver}}
+\subsubsection[{main(\+String args[])}]{\setlength{\rightskip}{0pt plus 5cm}static void Driver.\+main (
+\begin{DoxyParamCaption}
+\item[{String}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+) throws I\+O\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_driver_ad96bcac1144441cfe3fdf2e728349b79}
+\hypertarget{class_driver_aa89853174e62c333ae37e86bb3c32c60}{}\index{Driver@{Driver}!run\+Command@{run\+Command}}
+\index{run\+Command@{run\+Command}!Driver@{Driver}}
+\subsubsection[{run\+Command(\+String cmd, Game g)}]{\setlength{\rightskip}{0pt plus 5cm}static void Driver.\+run\+Command (
+\begin{DoxyParamCaption}
+\item[{String}]{cmd, }
+\item[{{\bf Game}}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_driver_aa89853174e62c333ae37e86bb3c32c60}
+Contains the switches for the game to run and process command, all command from the Available commands are \char`\"{}help\char`\"{} \char`\"{}pick up items\char`\"{} fight monster\char`\"{}
+\char`\"{}move room\char`\"{}
+\char`\"{}check inventory\char`\"{}
+\char`\"{}use item" 
+\begin{DoxyParams}{Parameters}
+{\em g} & \hyperlink{class_game}{Game} object game object created from \hyperlink{class_driver_ad96bcac1144441cfe3fdf2e728349b79}{main()} \\
+\hline
+{\em cmd} & command string taken from the console. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_driver_8java}{Driver.\+java}\end{DoxyCompactItemize}

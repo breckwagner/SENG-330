@@ -10,11 +10,10 @@ import java.io.IOException;
 *  from the console.
 */
 public class Driver {
-
+    static final String[] commands = {"help","pick up items","fight monster","move room","check inventory","use item"};
     public static void main (String args[]) throws IOException {
 
         Game g = new Game(0);
-        String[] commands = {"help","pick up items","fight monster","move room","check inventory","use item"};
 
 
         Console c = System.console();

@@ -1,0 +1,109 @@
+\hypertarget{class_room}{}\section{Room Class Reference}
+\label{class_room}\index{Room@{Room}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_room_aca38f1673fd9264e15575e6faa34ba44}{Room} ()
+\item 
+void \hyperlink{class_room_a5736252d41ba0dd28448a8a503ffac6b}{list\+Objects\+In\+Room} ()
+\item 
+\hyperlink{class_room_aca38f1673fd9264e15575e6faa34ba44}{Room} ()
+\item 
+\hyperlink{class_room_a7f6ed8f23c70b90599acdd68ca7aed06}{Room} (List$<$ \hyperlink{class_room}{Room} $>$ neighboring\+Rooms)
+\item 
+void \hyperlink{class_room_a4f262a8900dd0bed2891f3c21e1baa0f}{print\+List\+Objects\+In\+Room} (String prefix, String postfix, String delimiter)
+\item 
+void \hyperlink{class_room_a5736252d41ba0dd28448a8a503ffac6b}{list\+Objects\+In\+Room} ()
+\item 
+void \hyperlink{class_room_af0380bf1a3f1ef06242b8db7dee85567}{initiate\+Events} (\hyperlink{class_player}{Player} p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_room}{Room} is the class representation of any space in the game. A \hyperlink{class_room}{Room} object encapsulates the state information needed for the various configurations of of games.
+
+\begin{DoxyAuthor}{Author}
+... 
+
+Richard B. Wagner 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_room_aca38f1673fd9264e15575e6faa34ba44}{}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room()}]{\setlength{\rightskip}{0pt plus 5cm}Room.\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_aca38f1673fd9264e15575e6faa34ba44}
+\hypertarget{class_room_aca38f1673fd9264e15575e6faa34ba44}{}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room()}]{\setlength{\rightskip}{0pt plus 5cm}Room.\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_aca38f1673fd9264e15575e6faa34ba44}
+Default constructor. (For invocation by subclass constructors, typically implicit.) \hypertarget{class_room_a7f6ed8f23c70b90599acdd68ca7aed06}{}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room(\+List$<$ Room $>$ neighboring\+Rooms)}]{\setlength{\rightskip}{0pt plus 5cm}Room.\+Room (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Room} $>$}]{neighboring\+Rooms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_a7f6ed8f23c70b90599acdd68ca7aed06}
+Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_room_af0380bf1a3f1ef06242b8db7dee85567}{}\index{Room@{Room}!initiate\+Events@{initiate\+Events}}
+\index{initiate\+Events@{initiate\+Events}!Room@{Room}}
+\subsubsection[{initiate\+Events(\+Player p)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+initiate\+Events (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_af0380bf1a3f1ef06242b8db7dee85567}
+For each \hyperlink{class_game_object}{Game\+Object} in the room, call that objects action method. For items, this will be an empty call. \hypertarget{class_room_a5736252d41ba0dd28448a8a503ffac6b}{}\index{Room@{Room}!list\+Objects\+In\+Room@{list\+Objects\+In\+Room}}
+\index{list\+Objects\+In\+Room@{list\+Objects\+In\+Room}!Room@{Room}}
+\subsubsection[{list\+Objects\+In\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+list\+Objects\+In\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_a5736252d41ba0dd28448a8a503ffac6b}
+\hypertarget{class_room_a5736252d41ba0dd28448a8a503ffac6b}{}\index{Room@{Room}!list\+Objects\+In\+Room@{list\+Objects\+In\+Room}}
+\index{list\+Objects\+In\+Room@{list\+Objects\+In\+Room}!Room@{Room}}
+\subsubsection[{list\+Objects\+In\+Room()}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+list\+Objects\+In\+Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_a5736252d41ba0dd28448a8a503ffac6b}
+Prints a list of the \hyperlink{class_game_object}{Game\+Object} in a room. 
+\begin{DoxyParams}{Parameters}
+{\em prefix} & a String to prepend at the beginning the output \\
+\hline
+{\em postfix} & a String to append at the end of the output \\
+\hline
+{\em delimiter} & a string to insert in between each element in the list \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_room_a4f262a8900dd0bed2891f3c21e1baa0f}{}\index{Room@{Room}!print\+List\+Objects\+In\+Room@{print\+List\+Objects\+In\+Room}}
+\index{print\+List\+Objects\+In\+Room@{print\+List\+Objects\+In\+Room}!Room@{Room}}
+\subsubsection[{print\+List\+Objects\+In\+Room(\+String prefix, String postfix, String delimiter)}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\+print\+List\+Objects\+In\+Room (
+\begin{DoxyParamCaption}
+\item[{String}]{prefix, }
+\item[{String}]{postfix, }
+\item[{String}]{delimiter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_room_a4f262a8900dd0bed2891f3c21e1baa0f}
+Prints a list of the \hyperlink{class_game_object}{Game\+Object} in a room. 
+\begin{DoxyParams}{Parameters}
+{\em prefix} & a String to prepend at the beginning the output \\
+\hline
+{\em postfix} & a String to append at the end of the output \\
+\hline
+{\em delimiter} & a string to insert in between each element in the list \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+other/project\+\_\+phase3/\hyperlink{other_2project__phase3_2_room_8java}{Room.\+java}\end{DoxyCompactItemize}
