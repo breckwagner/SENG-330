@@ -35,4 +35,8 @@ public class Player {
 		this.health += 20;
 		this.potion--;
 	}
+
+	public void recieveDamage(Adversary a){
+		health -= a.attack;
+	}
 }

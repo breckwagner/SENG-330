@@ -10,15 +10,19 @@
 * 
 */
 
+import java.util.LinkedList;
 public class Game {
     public Player player = new Player();
-    public int currentRooms;
+    public int roomsCleared;
     public int maxRooms;
+    public Room currentRoom;
+    public List<Room> LinkedList roomList;
+
     /**
     *  Constructor for the game with static variables.
     */
     public Game() {
-    	currentRooms = 0;
+    	roomsCleared = 0;
     	maxRooms = 15;
 
     }
@@ -41,7 +45,7 @@ public class Game {
  	*	@return  boolean denoting wether the player objects health is greater than 0
  	*/
     public boolean isRunning() {
-    	if(player.health > 0 && currentRooms <= maxRooms){
+    	if(player.health > 0 && roomsCleared <= maxRooms){
     		return true;
     	} 
     }
