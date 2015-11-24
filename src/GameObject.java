@@ -2,8 +2,8 @@
 /**
  *
  */
-public interface GameObject {
+public interface GameObject extends java.io.Serializable {
 
-    public void action(Player p);
+    public void action(Actor p);
 
 }

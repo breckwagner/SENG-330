@@ -1,6 +1,6 @@
 
 
-public class Trap extends Adversary{
+public class Trap extends Adversarial{
 
 	public Trap(Room r) {
 		super(r);

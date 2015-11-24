@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,9 +13,11 @@ import java.util.List;
  *	@author Greg Bacic
  *
  */
-public class Room {
+public class Room implements java.io.Serializable {
 	List<GameObject> listOfObjects = new ArrayList<GameObject>();
-	List<Room> neighboringRooms = new ArrayList<Room>();
+	ArrayList<Room> neighboringRooms = new ArrayList<Room>();
+	public ArrayList<String> geo = new ArrayList<String>();
+	private String description = "";
 
 
 	/**
@@ -23,11 +25,12 @@ public class Room {
 	 * constructors, typically implicit.)
 	 */
     public Room() {}
+    
 
 	/**
 	 * Constructor
 	 */
-	public Room(List<Room> neighboringRooms) {
+	public Room(ArrayList<Room> neighboringRooms) {
 		this.neighboringRooms = neighboringRooms;
 	}
 
@@ -74,7 +77,41 @@ public class Room {
 	 */
 	public void initiateEvents(Player p) {
 		for (GameObject object : listOfObjects) {
-			object.action(p);
+			if(!(object instanceof Player)) {
+				object.action(p);
+			}
 		}
 	}
+	
+	public void addNeighboringRoom(Room room, String g) {
+		neighboringRooms.add(room);
+		geo.add(g);
+	}
+	
+	public void addDescription(String description){
+		this.description = description;
+	}
+	
+	@Override
+	public String toString(){
+		StringBuilder output = new StringBuilder();
+		output.append(description);
+		
+		if(!this.listOfObjects.isEmpty()) {
+			output.append("\n");
+			output.append("In the room with you " + ((listOfObjects.size()==1)?"is a":"are"));
+			for(GameObject obj : listOfObjects) {
+				//if(obj instanceof Actor) {
+					output.append(obj);
+				//}
+			}
+		}
+		
+		return output.toString();
+	}
+	
+	public String getDirections() {
+		return geo.toString();
+	}
+	
 }
