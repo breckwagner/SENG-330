@@ -76,6 +76,7 @@ public class Game implements java.io.Serializable {
 		// Optional parameters - initialize with default values
 		private long seed = new Random().nextLong();
 		private Function<Game, Boolean> isRunning;
+		private RoomDescription descriptionOfRoom = new RoomDescription();
 		
 		public Builder(Room room, Player player) {
 			startingRoom = room;
@@ -115,7 +116,8 @@ public class Game implements java.io.Serializable {
 					current.addNeighboringRoom(map[mod(i+1,N)][j], "East");
 					current.addNeighboringRoom(map[i][mod(j+1,N)], "South");
 					current.addNeighboringRoom(map[mod(i-1,N)][j], "West");
-					current.addDescription("You are in a very uniform looking place in the woods. All around you is dense forest.");
+					//current.addDescription("You are in a very uniform looking place in the woods. All around you is dense forest.");
+					current.addDescription(descriptionOfRoom.getDescription());
 					
 					if(r.nextDouble()<0.5) {
 						current.listOfObjects.add(new Monster(current));
