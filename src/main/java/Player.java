@@ -1,7 +1,13 @@
 
 
+
 public class Player extends Actor {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6659813398468260515L;
+
 	/*
 	* Default Constructor for Player
 	*/

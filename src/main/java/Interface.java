@@ -1,7 +1,8 @@
 
 
+
+
 import java.util.Scanner;
-import java.util.function.*;
 import java.util.stream.Collectors;
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +11,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
 
 /**
@@ -98,7 +98,8 @@ public class Interface {
 			System.out.println("\nYou could go: " + g.player.currentRoom.getDirections());
 
 			System.out.print("> ");
-			in = input.nextLine().trim();
+			in = "";// input.nextLine().trim();
+			if(true) break loop;
 			//System.in.read();
 			switch (in) {
 			case "help":

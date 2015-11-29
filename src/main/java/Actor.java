@@ -1,4 +1,6 @@
 
+
+
 /**
  * Implements gameObject for the adversaries to interact with the player. The adversary can either be a monster
  * or a trap.
@@ -13,6 +15,10 @@
  */
 public class Actor implements GameObject, Adversarial {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4084908891234593944L;
 	//protected LinkedList<Room> 
 	protected Room currentRoom;
 	protected int health;

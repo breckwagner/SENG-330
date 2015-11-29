@@ -1,5 +1,12 @@
 
+
+
 public class Monster extends Actor {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1278188525316525032L;
+
 	public Monster(Room r){
 		super(r);
 	}

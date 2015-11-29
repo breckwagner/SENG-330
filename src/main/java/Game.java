@@ -1,9 +1,11 @@
 
 
+
+
 /**
  * 	Creates a new player object(class constructor) for the game and while game
  *  is currently a placeholder
- *	for the game obect which will run the game.
+ *	for the game object which will run the game.
  *
  * 	@author Richard B. Wagner
  *	@author Mook Tungs
@@ -11,7 +13,6 @@
  *	@author Greg Bacic
  */
 
-import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.function.Function;

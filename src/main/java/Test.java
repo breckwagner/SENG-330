@@ -1,11 +1,12 @@
 
+
 import java.lang.ProcessBuilder;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
-class test {
+class Test {
 	/*
 	public static final String ANSI_RESET =  "\u001B[0m";
 	public static final String ANSI_BLACK =  "\u001B[30m";
@@ -19,6 +20,7 @@ class test {
 	*/
 	
 	private static int get_console_property(int magic) {
+		/*
 		try {
 			ProcessBuilder processBuilder = new ProcessBuilder("/bin/sh", "-c", "stty -a < /dev/tty");
 			Process process = processBuilder.start();
@@ -36,6 +38,10 @@ class test {
 		} catch (Exception e) {
 			return -1;
 		}
+		*/
+		for (String item : System.getenv().keySet())
+			System.out.println(item+" : "+System.getenv(item));
+		return 0;// Integer.parseInt(System.getenv("COLUMNS"));
 	}
 	
 	public static int getCols() {

@@ -1,5 +1,6 @@
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,10 @@ import java.util.List;
  *
  */
 public class Room implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4762785916008141738L;
 	List<GameObject> listOfObjects = new ArrayList<GameObject>();
 	ArrayList<Room> neighboringRooms = new ArrayList<Room>();
 	public ArrayList<String> geo = new ArrayList<String>();

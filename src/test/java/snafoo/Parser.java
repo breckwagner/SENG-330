@@ -1,5 +1,5 @@
 package snafoo;
-
+/*
 import java.io.StringReader;
 import java.util.List;
 
@@ -10,9 +10,9 @@ import edu.stanford.nlp.process.CoreLabelTokenFactory;
 import edu.stanford.nlp.process.PTBTokenizer;
 import edu.stanford.nlp.process.Tokenizer;
 import edu.stanford.nlp.trees.Tree;
-
+*/
 class Parser {
-
+/*
     private final static String PCG_MODEL = "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz";        
 
     private final TokenizerFactory<CoreLabel> tokenizerFactory = PTBTokenizer.factory(new CoreLabelTokenFactory(), "invertible=true");
@@ -44,5 +44,5 @@ class Parser {
             System.out.print(leaf.label().value() + "-" + parent.label().value() + " ");
         }
         System.out.println();               
-    }
+    }*/
 }

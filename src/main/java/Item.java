@@ -1,3 +1,4 @@
+
 /**
  * An Item represents any type of equipment, potion, tool, etc. Items are meant
  * to be equipped to an Actor.
@@ -6,6 +7,11 @@
  *
  */
 public class Item implements GameObject {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6343463843212544172L;
 
 	/**
 	 * 
