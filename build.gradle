@@ -12,12 +12,12 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-mainClassName = 'Utility'
+mainClassName = 'Interface'
 
 task runApp(type: JavaExec) {
 	classpath = sourceSets.main.runtimeClasspath
 
-	main = 'Utility'
+	main = 'Interface'
 
 	// arguments to pass to the application
 	//args 'appArg1'
@@ -36,8 +36,16 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    // The production code uses the SLF4J logging API at compile time
-    compile 'com.googlecode.lanterna:lanterna:3.+'
+	// The production code uses the SLF4J logging API at compile time
+	compile 'com.googlecode.lanterna:lanterna:3.0.0-beta1'
+    
+    
+    
+    
+    
+    
+    
+    
     //compile 'org.slf4j:slf4j-api:1.7.12'
     //compile 'edu.stanford.nlp:stanford-corenlp:3.5.2'
 

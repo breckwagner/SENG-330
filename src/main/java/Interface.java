@@ -98,9 +98,7 @@ public class Interface {
 			System.out.println("\nYou could go: " + g.player.currentRoom.getDirections());
 
 			System.out.print("> ");
-			in = "";// input.nextLine().trim();
-			if(true) break loop;
-			//System.in.read();
+			in = input.nextLine().trim();
 			switch (in) {
 			case "help":
 

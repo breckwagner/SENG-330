@@ -1,38 +1,41 @@
 
 
 import java.io.BufferedReader;
-
-
+import java.io.File;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
+
 import java.io.IOException;
 
-import com.googlecode.lanterna.TerminalPosition;
-import com.googlecode.lanterna.TerminalSize;
-import com.googlecode.lanterna.graphics.TextGraphics;
-import com.googlecode.lanterna.screen.Screen;
-import com.googlecode.lanterna.screen.TerminalScreen;
-import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
-import com.googlecode.lanterna.terminal.Terminal;
+
 
 
 public class Utility {
 	public static void main(String[] args) throws IOException {
-		Terminal terminal = new DefaultTerminalFactory().createTerminal();
-		Screen screen = new TerminalScreen(terminal);
+		/*
+	    // Setup terminal and screen layers
+	    Terminal terminal = new UnixTerminal(System.in, System.out, java.nio.charset.Charset.defaultCharset());
+	    Screen screen = new Screen(terminal);
+	    screen.startScreen();
+	    
+	    
 
-		String s = "Hello World!";
-		TextGraphics tGraphics = screen.newTextGraphics();
-
-		screen.startScreen();
-		screen.clear();
-
-		tGraphics.putString(10, 10, s);
-		screen.refresh();
-
-		screen.readInput();
-		screen.stopScreen();
+	    // Setup WindowBasedTextGUI for dialogs
+	    final WindowBasedTextGUI textGUI = new MultiWindowTextGUI(screen);
+	    textGUI.updateScreen();
+	    
+	    Button button = new Button("Enter");
+	    
+	    
+	    Panel panel = new com.googlecode.lanterna.gui2.Panel();
+		
+		
+		panel.addComponent(button);
+		textGUI.updateScreen();
+		*/
+		
+	    
 	}
 	private static int get_console_property(int magic) {
 		
