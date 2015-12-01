@@ -17,6 +17,11 @@ public class Player extends Actor {
 		currentRoom.listOfObjects.add(this);
 	}
 	
+	public Player(Player oldPlayer) {
+		super(oldPlayer.getCurrentRoom());
+		health = oldPlayer.health;
+	}
+	
 	/*
 	* Increase the player's health and decrease potion by 1
 	*/
@@ -32,6 +37,14 @@ public class Player extends Actor {
 	@Override
 	public void action(Actor a) {
 		// DO NOTHING
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "[health=" + health + ", attack=" + attack + "]";
 	}
 	
 }

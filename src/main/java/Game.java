@@ -85,7 +85,6 @@ public class Game implements java.io.Serializable {
 		// Optional parameters - initialize with default values
 		private long seed = new Random().nextLong();
 		private Function<Game, Boolean> isRunning;
-		private RoomDescription descriptionOfRoom = new RoomDescription();
 		
 		// PreBuilt GameObjects
 		
@@ -182,7 +181,7 @@ public class Game implements java.io.Serializable {
 					
 					roomNumber = "["+i+"]["+j+"]";
 					
-					current.addDescription(descriptionOfRoom.getDescription());
+					current.addDescription(Utility.roomDescriptions[new Random(63*j+i).nextInt(Utility.roomDescriptions.length)]);
 					
 					//current.addDescription(
 					//		"You are in a very uniform looking place in the woods. All around you is dense forest."+roomNumber);

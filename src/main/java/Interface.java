@@ -23,28 +23,6 @@ import java.io.ObjectOutputStream;
  *
  */
 public class Interface {
-
-	static final String GAME_OVER_ASCII = "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀\n" + "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼\n"
-			+ "██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀\n" + "██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼\n"
-			+ "███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄\n" + "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼\n" + "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
-			+ "██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼\n" + "██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼\n"
-			+ "███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄\n" + "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼\n"
-			+ "┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼\n" + "┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼";
-
-	static final String GAME_START_ASCII = 
-	  "__          __  _                            _______      __________  _____  _  __\n"
-	+ "\\ \\        / / | |                          |__   __|    |___  / __ \\|  __ \\| |/ /\n"
-	+ " \\ \\  /\\  / /__| | ___ ___  _ __ ___   ___     | | ___      / / |  | | |__) | ' / \n"
-	+ "  \\ \\/  \\/ / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\    | |/ _ \\    / /| |  | |  _  /|  <  \n"
-	+ "   \\  /\\  /  __/ | (_| (_) | | | | | |  __/    | | (_) |  / /_| |__| | | \\ \\| . \\ \n"
-	+ "    \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___|    |_|\\___/  /_____\\____/|_|  \\_\\_|\\_\\";
 	
 	
 	
@@ -59,12 +37,13 @@ public class Interface {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
 		
-		System.out.println(GAME_START_ASCII);
+		System.out.println(Utility.GAME_START_ASCII);
 		int cols = Utility.getCols();
 		
 		for(int i = 0; i < cols; i++) {
-			System.out.print("░");
+			System.out.print(" ");
 		}
+		System.out.println();
 		
 
 		Room startRoom = new Room();
@@ -72,7 +51,7 @@ public class Interface {
 
 		Game.Builder gBuilder = new Game.Builder(startRoom, player);
 		gBuilder.setSeed(0);
-		gBuilder.prebuildMapExtermination(5);
+		gBuilder.prebuildMapExtermination(3);
 
 		Game g;
 		if (args.length > 0) {
@@ -94,9 +73,10 @@ public class Interface {
 		String in;
 
 		loop: while (g.isRunning()) {
-			System.out.println(g.player.currentRoom);
+			System.out.println("Your current basic stats: " + g.player + "\n");
+			System.out.println(g.player.currentRoom.toString(g.player));
 			System.out.println("\nYou could go: " + g.player.currentRoom.getDirections());
-
+			
 			System.out.print("> ");
 			in = input.nextLine().trim();
 			switch (in) {
@@ -150,7 +130,7 @@ public class Interface {
 			g.player.currentRoom.initiateEvents(g.player);
 		}
 		if (!g.isRunning()) {
-			System.out.println(GAME_OVER_ASCII);
+			System.out.println(Utility.GAME_OVER_ASCII);
 		}
 		input.close();
 	}

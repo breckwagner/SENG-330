@@ -14,6 +14,8 @@ public class Item implements GameObject {
 	private static final long serialVersionUID = -6343463843212544172L;
 	
 	private Runnable action;
+	
+	public String name;
 
 	/**
 	 * 

@@ -101,20 +101,34 @@ public class Room implements java.io.Serializable {
 	@Override
 	public String toString(){
 		StringBuilder output = new StringBuilder();
-		output.append(description);
+		output.append(description+"\n");
 		
 		if(!this.listOfObjects.isEmpty()) {
 			output.append("\n");
-			output.append("In the room with you " + ((listOfObjects.size()==1)?"is a":"are"));
+			output.append("This room Contains: \n");
 			for(GameObject obj : listOfObjects) {
-				//if(obj instanceof Actor) {
-					output.append(obj);
-				//}
+				output.append(obj);
 			}
 		}
 		
 		return output.toString();
 	}
+	
+	public String toString(Player p){
+		StringBuilder output = new StringBuilder();
+		output.append(description+"\n");
+		
+		if(!this.listOfObjects.isEmpty()) {
+			output.append("\n");
+			output.append("This room Contains: \n");
+			for(GameObject obj : listOfObjects) {
+				if(obj!=p) output.append(obj+"\n");
+			}
+		}
+		
+		return output.toString();
+	}
+	
 	
 	public String getDirections() {
 		return geo.toString();
