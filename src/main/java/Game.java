@@ -181,7 +181,9 @@ public class Game implements java.io.Serializable {
 					
 					roomNumber = "["+i+"]["+j+"]";
 					
-					current.addDescription(Utility.roomDescriptions[new Random(63*j+i).nextInt(Utility.roomDescriptions.length)]);
+					
+					
+					current.addDescription(Utility.roomDescriptions[new Random(seed*j+i).nextInt(Utility.roomDescriptions.length)]);
 					
 					//current.addDescription(
 					//		"You are in a very uniform looking place in the woods. All around you is dense forest."+roomNumber);
