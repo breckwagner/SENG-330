@@ -1,6 +1,24 @@
 # Installing
 
 
+Ensure you have the following software installed
+
+Java 1.8
+Gradle
+
+
+Compiling and running the program is done with
+
+Compiling:
+
+gradle build
+
+this will generate files inside a folder called build, then the user can navigate to the build/classes/main directory.
+
+The program can be run by typing
+'java Interface'
+
+this will start the interface class which includes the main().
 
 Generating the documentation can be done by:
 
